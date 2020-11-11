@@ -10,7 +10,10 @@ import {
   CardMedia,
   Button,
 } from "@material-ui/core";
-import CountUp from "react-countup";
+import PersonIcon from "@material-ui/icons/Person";
+import DescriptionIcon from "@material-ui/icons/Description";
+import WatchIcon from "@material-ui/icons/Watch";
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
 
 const Header = ({data}) => {
     console.log('data',data)
@@ -27,29 +30,35 @@ const Header = ({data}) => {
 
             <CardContent className="header__content">
               <h3>
+                <PersonIcon />
                 Student Name:{" "}
                 <span className="header__student">{data.student_name}</span>
               </h3>
-              <Typography>
+              <Typography color="textSecondary">
                 {" "}
                 Student Admission number:{" "}
                 <span className="header__student">
                   {data.student_admission_number}
                 </span>
               </Typography>
-              <Typography>
+              <Typography color="textSecondary">
                 Exam name:{" "}
                 <span className="header__student">{data.exam_name}</span>
               </Typography>
-              <Typography>
+              <Typography color="textSecondary">
                 Class name:{" "}
                 <span className="header__student">{data.class_name}</span>
               </Typography>
-              <Typography>
-                Date: <span className="header__student">{data.date_time}</span>
+              <Typography color="textSecondary">
+                Mean grade:
+                <span className="header__student">{data.mean_grade}</span>
               </Typography>
-              <Typography>
-                Today date:
+              <Typography color="textSecondary">
+                <AccessTimeIcon /> Date:{" "}
+                <span className="header__student">{data.date_time}</span>
+              </Typography>
+              <Typography color="textSecondary">
+                <WatchIcon /> Today date:
                 <span className="header__student">
                   {new Date().toDateString()}
                 </span>
@@ -58,8 +67,11 @@ const Header = ({data}) => {
           </Grid>
           <Grid item component={Card} xs={12} md={5} className="app__infected">
             <CardContent>
-              <h3>Remarks</h3>
-              <Typography>
+              <h3>
+                <DescriptionIcon />
+                Remarks
+              </h3>
+              <Typography color="textSecondary">
                 Principals remarks:{" "}
                 <span className="header__student">
                   {data.principals_remarks}
