@@ -1,0 +1,32 @@
+.header{
+   margin-top: 20px; 
+   margin-right: 20px;
+   margin-bottom: 20px;
+   margin-left: 30px;
+}
+
+.app__infected{
+ height: 300px;
+ display: flex;
+ flex-direction: row;
+ padding: 20px;
+ border-bottom: 10px solid rgba(255, 0, 234, 0.473);
+ margin-right: 2% !important;
+}
+.header__content{
+  padding-right: 0;
+  margin-right: 0;
+  width: 500px;
+  background-color: rgb(251, 250, 252);
+  margin-left: 10px;
+}
+.header__image{
+  object-fit: contain; 
+  width: 200px;
+  border-radius: 50%;
+}
+.header__student{
+  text-decoration: dotted;
+  color: rgba(255, 0, 234, 0.473);
+  text-decoration-line: underline;
+}
