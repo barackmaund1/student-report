@@ -7,6 +7,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import './Tables.css'
+import CountUp from "react-countup";
 
 const Tables = ({data}) => {
 
@@ -59,9 +60,34 @@ const Tables = ({data}) => {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.position}</TableCell>
-                  <TableCell align="right">{row.position_out_of}</TableCell>
-                  <TableCell align="right">{row.deviation}</TableCell>
+                  <TableCell align="right">
+                    {" "}
+                    <CountUp
+                      start={0}
+                      end={row.position}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </TableCell>
+
+                  <TableCell align="right">
+                    {" "}
+                    <CountUp
+                      start={0}
+                      end={row.position_out_of}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </TableCell>
+                  <TableCell align="right">
+                    {" "}
+                    <CountUp
+                      start={0}
+                      end={row.deviation}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -83,8 +109,23 @@ const Tables = ({data}) => {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.avarage_score}</TableCell>
-                  <TableCell align="right">{row.deviation}</TableCell>
+                  <TableCell align="right">
+                    <CountUp
+                      start={0}
+                      end={row.avarage_score}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </TableCell>
+
+                  <TableCell align="right">
+                    <CountUp
+                      start={0}
+                      end={row.deviation}
+                      duration={5.5}
+                      separator=","
+                    />
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

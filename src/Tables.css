@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: row;
     margin-left: 120px;
+    
 }
 .table__simple{
-min-width: 650;
+min-Width: 340;
 
 }
 .table__container{
