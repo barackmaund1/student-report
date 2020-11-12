@@ -1,0 +1,20 @@
+.table{
+    align-items: center;
+    justify-content: center;
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 120px;
+}
+.table__simple{
+min-width: 650;
+
+}
+.table__container{
+    margin-right:30px ;
+    margin-top: 40px;
+    border-bottom: 5px solid rgba(255, 0, 234, 0.473);
+}
+.table__container1{
+    border-bottom: 5px solid rgba(255, 0, 234, 0.473);
+}

@@ -1,6 +1,7 @@
 import './App.css';
 import Response from './report'
 import Header from './Header';
+import Tables from './Tables';
 
 function App() {
  // Mock data API
@@ -11,7 +12,9 @@ function App() {
       <header className="App-header">
         <h1>Zeraki student report 🚀 🔥 </h1>
         <Header data={data}/>
+        <Tables data={data}/>
       </header>
+      
     </div>
   );
 }
