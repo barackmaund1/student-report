@@ -8,17 +8,17 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import CountUp from "react-countup";
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    
     
   },
   body: {
     fontSize: 14,
   },
 }))(TableCell);
-
 const StyledTableRow = withStyles((theme) => ({
   root: {
     "&:nth-of-type(odd)": {
@@ -33,7 +33,7 @@ const StudentResults = ({data}) => {
    
  
     return (
-      <div className='studentresult'>
+      <div className="studentresult">
         <TableContainer className="studentresults" component={Paper}>
           <Table
             className="studentresults__table"
@@ -54,17 +54,43 @@ const StudentResults = ({data}) => {
               {subject_results.map((item, row) => (
                 <StyledTableRow key={row}>
                   <StyledTableCell component="th" scope="row">
-                    {item.subject_name}
+                   {item.subject_name}
                   </StyledTableCell>
 
-                  <StyledTableCell align="right">{item.grade}</StyledTableCell>
-                  <StyledTableCell align="right">{item.score}</StyledTableCell>
-                  <StyledTableCell align="right">{item.rank}</StyledTableCell>
                   <StyledTableCell align="right">
-                    {item.rank_out_of}
+                   {item.grade}
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    {item.deviation}
+                    <CountUp
+                      start={0}
+                      end={item.score}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    <CountUp
+                      start={0}
+                      end={item.rank}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    <CountUp
+                      start={0}
+                      end={item.rank_out_of}
+                      duration={2.5}
+                      separator=","
+                    />
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    <CountUp
+                      start={0}
+                      end={item.deviation}
+                      duration={2.5}
+                      separator=","
+                    />
                   </StyledTableCell>
                   <StyledTableCell align="right">
                     {item.comment}
