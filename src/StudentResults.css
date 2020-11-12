@@ -2,10 +2,11 @@
    min-width: 700; 
 }
 .studentresults{
-   width: 50% !important;
+   width: 70% !important;
     margin-left: 120px;
     margin-top: 30px;
     margin-bottom: 20px;
+    border-bottom: 5px solid rgba(255, 0, 234, 0.473);
 }
 .studentresults__tableRow{
    background-color: rgba(255, 0, 234, 0.473) !important;
@@ -14,4 +15,26 @@
 .studentresult{
    display:flex;
    flex-direction: row;
+}
+.studentresult__comment{
+ 
+
+color: rgba(252, 2, 231, 0.473) !important;
+}
+.studentresult__h3{
+   text-align: center;
+   justify-content: center;
+   margin: 10px;
+   color: rgb(100, 104, 104);
+   
+}
+@media(max-width:770px){
+   .studentresults{
+   width: 100% !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid rgba(255, 0, 234, 0.473);
+}
 }

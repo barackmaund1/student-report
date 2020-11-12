@@ -1,6 +1,17 @@
 h1{
   text-align: center;
   justify-content: center;
+  color: rgb(100, 104, 104);
+}
+@media(max-width:770px){
+  h1{
+  text-align: center;
+  justify-content: center;
+  color: rgb(100, 104, 104);
+  font-size: 20px !important;
+  margin-top: 10px;
+}
+
 }
 
 

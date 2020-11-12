@@ -35,6 +35,7 @@ const StudentResults = ({data}) => {
     return (
       <div className="studentresult">
         <TableContainer className="studentresults" component={Paper}>
+          <h3 className="studentresult__h3">Subject results</h3>
           <Table
             className="studentresults__table"
             aria-label="customized table"
@@ -54,12 +55,10 @@ const StudentResults = ({data}) => {
               {subject_results.map((item, row) => (
                 <StyledTableRow key={row}>
                   <StyledTableCell component="th" scope="row">
-                   {item.subject_name}
+                    {item.subject_name}
                   </StyledTableCell>
 
-                  <StyledTableCell align="right">
-                   {item.grade}
-                  </StyledTableCell>
+                  <StyledTableCell align="right">{item.grade}</StyledTableCell>
                   <StyledTableCell align="right">
                     <CountUp
                       start={0}
@@ -92,7 +91,10 @@ const StudentResults = ({data}) => {
                       separator=","
                     />
                   </StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell
+                    align="right"
+                    className="studentresult__comment"
+                  >
                     {item.comment}
                   </StyledTableCell>
                 </StyledTableRow>
@@ -100,7 +102,6 @@ const StudentResults = ({data}) => {
             </TableBody>
           </Table>
         </TableContainer>
-        <h2>bar chart</h2>
       </div>
     );
 }

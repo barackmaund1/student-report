@@ -1,0 +1,25 @@
+.chart{
+    width: 80%;
+    justify-content: center;
+    margin-left: 80px;
+}
+@media(max-width:770px){
+ .chart{
+    width: 100%;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px !important;
+    margin-bottom: 20px !important;
+    
+}
+.chart__bar{
+    justify-content: center;
+    width: 100% !important;
+    height:100% !important;
+}
+.chart__line{
+    justify-content: center;
+    width: 100% !important;
+    height:100% !important;
+}
+}

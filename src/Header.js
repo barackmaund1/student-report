@@ -20,8 +20,8 @@ const Header = ({data}) => {
     return (
       //  BEM
       <div className="header">
-        <Grid container spacing={3} justify="center">
-          <Grid item component={Card} xs={12} md={5} className="app__infected ">
+        <Grid container spacing={3} justify="center" className='header__container'>
+          <Grid item component={Card} xs={12} md={5} className="app__infected">
             <CardMedia
               className="header__image"
               image={data.student_photo}
