@@ -60,7 +60,9 @@ font-family: 'Tangerine', cursive;
   object-fit: contain; 
   width: 150px;
   height: 200px !important;
-  
+  justify-content: center;
+  text-align: center;
+  margin-left: 40px;
 }
 
 }
